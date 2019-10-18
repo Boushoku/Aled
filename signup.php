@@ -70,10 +70,9 @@
                         <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                     </div>
                     <select class="form-control">
-                        <option selected=""> Select job type</option>
-                        <option>Designer</option>
-                        <option>Manager</option>
-                        <option>Accaunting</option>
+                        <option selected=""> Select user type</option>
+                        <option>Doctor</option>
+                        <option>Patient</option>
                     </select>
                 </div> <!-- form-group end.// -->
                 <div class="form-group input-group">

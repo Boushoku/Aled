@@ -61,7 +61,7 @@ include "header.html";
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     <p><a class="p-2 text-dark" href="#">Forgot password</a> ?</p>
     <p>Pas encore de compte ?<a class="p-2 text-dark" href="signup.php">Inscrivez-vous</a> !</p>
-    <p class="mt-5 mb-3 text-muted">&copy; 2018-2019</p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
 </form>
 
 </body>

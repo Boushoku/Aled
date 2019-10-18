@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="44b39997-777d-4aca-9731-c13076661766" name="ftp-boushoku.alwaysdata.net" url="http://ftp-boushoku.alwaysdata.net">
-        <fileTransfer host="ftp-boushoku.alwaysdata.net" port="21">
+      <webServer id="44b39997-777d-4aca-9731-c13076661766" name="ftp-boushoku.alwaysdata.net" url="http://boushoku.alwaysdata.net">
+        <fileTransfer host="ftp-boushoku.alwaysdata.net" port="21" rootFolder="/www">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
