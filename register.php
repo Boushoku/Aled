@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,57 +41,39 @@
 <?php
     include "header.html";
 ?>
-<!--<div class="container mt-5">
+<div class="container mt-5">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title mt-3 text-center">Create Account</h4>
             <p class="text-center">Get started with your free account</p>
-            <form>
+
+            <form method="post" action="register.php">
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Full name" type="text">
+                    <input type="text" name="username" value="<?php echo $username; ?>" class="form-control" placeholder="Username">
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                     </div>
-                    <input name="" class="form-control" placeholder="Email address" type="email">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
-                    </div>
-                    <select class="custom-select" style="max-width: 120px;">
-                        <option selected="">+33</option>
-                    </select>
-                    <input name="" class="form-control" placeholder="Phone number" type="text">
-                </div>
-                <div class="form-group input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-                    </div>
-                    <select class="form-control">
-                        <option selected=""> Select user type</option>
-                        <option>Doctor</option>
-                        <option>Patient</option>
-                    </select>
+                    <input class="form-control" placeholder="Email address" type="email" name="email" value="<?php echo $email; ?>">
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
-                    <input class="form-control" placeholder="Create password" type="password">
+                    <input class="form-control" placeholder="Create password" type="password" name="password_1">
                 </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
-                    <input class="form-control" placeholder="Repeat password" type="password">
+                    <input class="form-control" placeholder="Repeat password" type="password" name="password_2">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                    <button type="submit" class="btn btn-primary btn-block" name="reg_user"> Create Account  </button>
                 </div>
                 <p class="text-center">Have an account? <a href="login.php">Log In</a> </p>
             </form>
@@ -98,36 +81,9 @@
     </div>
 
 </div>
--->
 
-<?php include('server.php') ?>
 
-<form method="post" action="register.php">
-    <?php include('errors.php'); ?>
-    <div class="input-group">
-        <label>Username</label>
-        <input type="text" name="username" value="<?php echo $username; ?>">
-    </div>
-    <div class="input-group">
-        <label>Email</label>
-        <input type="email" name="email" value="<?php echo $email; ?>">
-    </div>
-    <div class="input-group">
-        <label>Password</label>
-        <input type="password" name="password_1">
-    </div>
-    <div class="input-group">
-        <label>Confirm password</label>
-        <input type="password" name="password_2">
-    </div>
-    <div class="input-group">
-        <button type="submit" class="btn" name="reg_user">Register</button>
-    </div>
-    <p>
-        Already a member? <a href="login.php">Sign in</a>
-    </p>
-</form>
-</body>
-</html>
+
+
 </body>
 </html>

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,18 +45,40 @@
 </head>
 <body>
 
+<div class="content">
+    <!-- notification message -->
+
+    <!-- logged in user information -->
+
+
+        <header class="blog-header py-3 px-3">
+            <div class="row flex-nowrap justify-content-between align-items-center mx-5">
+                <div class="col-4 pt-1">
+                    <a class="text-muted" href="form_base.html">Faire son diagnostic</a>
+                    <a class="text-muted ml-5" href="camera_upload.html">Test Caméra</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="http://boushoku.alwaysdata.net">ALED</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+
+                    <?php  if (isset($_SESSION['username'])) : ?>
+                        <strong class="mr-5">Welcome <?php echo $_SESSION['username']; ?></strong>
+                        <a class="btn btn-sm btn-outline-secondary" href="index.php?logout='1'" >logout</a>
+                    <?php else :?>
+                        <a class="btn btn-sm btn-outline-secondary" href="login.php">Login</a>
+                    <?php endif ?>
+
+                </div>
+            </div>
+        </header>
+
+</div>
+
 <?php
-/**
- * Created by PhpStorm.
- * User: thibautchevallier
- * Date: 2019-09-24
- * Time: 09:28
- */
-
-include "header.html";
-include "base.html";
-include "footer.html";
-
+    include "base.html";
+    include "footer.html";
 ?>
+
 </body>
 </html>

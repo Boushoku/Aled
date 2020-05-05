@@ -44,13 +44,13 @@
 </style>
 <?php
     include "header.html";
+    include('server.php');
+
 ?>
 
-<form class="form-signin text-center mt-5">
+<form class="form-signin text-center mt-5" method="post" action="login.php">
     <img class="mb-4" src="Static/images/doctor.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
-    <label>Username</label>
-    <input type="text" name="username" >
 
         <label class="sr-only">Username</label>
         <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
@@ -58,11 +58,6 @@
         <label class="sr-only">Password</label>
         <input type="password" name="password" class="form-control" placeholder="Password" required>
 
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
-    </div>
     <button type="submit" class="btn btn-lg btn-primary btn-block" name="login_user">Login</button>
     <p><a class="p-2 text-dark" href="#">Forgot password</a> ?</p>
     <p>Pas encore de compte ?<a class="p-2 text-dark" href="register.php">Inscrivez-vous</a> !</p>

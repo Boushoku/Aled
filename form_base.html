@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+-->
+<html lang="fr">
+<head>
+	<link rel="stylesheet" href="Static/css/mouse_tracker.css" type="text/css"/>
+    <link rel="stylesheet" href="Static/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="Static/css/bootstrap.css" type="text/css"/>
+
+    <title>Symptoms analysis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Static/js/form_base.js"></script>
+    <link rel="stylesheet" href="Static/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="Static/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>ALED - Medecine interventions</title>
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/sell/1-2-3/vendor/nouislider/nouislider.css">
+    <!-- Google fonts - Playfair Display-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
+
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/sell/1-2-3/vendor/owl.carousel/assets/owl.carousel.css">
+    <!-- Ekko Lightbox-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/sell/1-2-3/vendor/ekko-lightbox/ekko-lightbox.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/sell/1-2-3/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/sell/1-2-3/css/custom.css">
+    <!-- Favicon-->
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="Static/images/doctor.png"/>
+    <link rel="stylesheet" href="Static/css/style.css">
+    <link rel="stylesheet" href="Static/css/normalize.css">
+    <link href="/Static/css/blog.css" rel="stylesheet">
+</head>
+<body onmousemove="myFunction(showCoords(event))">
+<header class="blog-header py-3 px-3">
+    <div class="row flex-nowrap justify-content-between align-items-center mx-5">
+        <div class="col-4 pt-1">
+            <a class="text-muted" href="form_base.html">Faire son diagnostic</a>
+            <a class="text-muted ml-5" href="mouse.html">Mouse stalker</a>
+        </div>
+        <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="http://boushoku.alwaysdata.net">ALED</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+            <form class="form-inline ">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                       aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
+
+            <a class="btn btn-sm btn-outline-secondary" href="login.php">Login</a>
+        </div>
+    </div>
+</header>
+<div class="container text-center">
+    <h1 class="my-5">Symptoms analysis</h1>
+
+    <label>
+        <input type="checkbox" name="acceptConditions1" >
+    </label> I understand and accept that the results given
+    don't replace a real medical diagnostic<br>
+    <input type="checkbox" name="acceptConditions2" > I accept the processing and hosting of my health data<br>
+
+    <h5 class="mt-5 mb-3">Choose the most important symptom</h5>
+    <form name="form_symptoms" id ="form_symptoms" action="" method="POST">
+        <!-- MUST ADD PHP IN "ACTIONS" -->
+
+        <fieldset id="symptoms">
+            <div>
+                <label for="First_symptom"> Your first symptom</label>
+                <select class="select" name="First_symptom" id="First_symptom">
+                    <option value="1">Anxiety</option>
+                    <option value="2">Arm pain</option>
+                    <option value="3">Back pain</option>
+                    <option value="4">Breathing difficulty</option>
+                    <option value="5">Chills</option>
+                    <option value="6">Cough</option>
+                    <option value="7">Delusions</option>
+                    <option value="8">Diarrhea</option>
+                    <option value="9">Distended belly</option>
+                    <option value="10">Ear pain</option>
+                    <option value="11">Fatigue</option>
+                    <option value="12">Fever</option>
+                    <option value="13">Flatulence</option>
+                    <option value="14">Headache</option>
+                    <option value="15">Nausea</option>
+                    <option value="16">Neck pain</option>
+                    <option value="17">Nosebleed</option>
+                    <option value="18">Permanent thirst</option>
+                    <option value="19">Stomachache</option>
+                    <option value="20">Sweat</option>
+                    <option value="21">Tremor</option>
+                    <option value="21">Vertigo</option>
+                </select>
+            </div>
+        </fieldset>
+
+
+<p id="demo"></p>
+
+<ul id="myList" name="contFichier">
+  <li>x/y</li>
+</ul>
+
+
+        <input onclick="clearCoor()" type="button" class="btn btn-primary" id="btn_symptom_1" name="sub_send_1" value="Confirm">
+
+    </form>
+<form action="CreaFichier.php" method="post" id="envoiPHP" TARGET=_BLANK>
+  <input type="text" class="input1" id="contFichier" name="contFichier"
+       size=9999>
+</form>
+</div>
+<script>
+var listeCoor="";
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = coor;
+  var maCoord = new Object();
+  maCoord.x = x;
+  maCoord.y = y;
+  return(maCoord);
+}
+
+function clearCoor() {
+  document.getElementById("demo").innerHTML = "";
+  document.getElementById("envoiPHP").submit();
+}
+
+function myFunction(maCoord) {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(maCoord.x+"/"+maCoord.y);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+  var str = maCoord.x+"/"+maCoord.y;
+  listeCoor = listeCoor + str + ",";
+  $(".input1").val(listeCoor);
+}
+
+
+</script>
+</body>
+</html>
