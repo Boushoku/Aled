@@ -43,24 +43,29 @@
     }
 </style>
 <?php
-include "header.html";
+    include "header.html";
 ?>
 
 <form class="form-signin text-center mt-5">
     <img class="mb-4" src="Static/images/doctor.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label>Username</label>
+    <input type="text" name="username" >
+
+        <label class="sr-only">Username</label>
+        <input type="text" name="username" class="form-control" placeholder="username" required autofocus>
+
+        <label class="sr-only">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="Password" required>
+
     <div class="checkbox mb-3">
         <label>
             <input type="checkbox" value="remember-me"> Remember me
         </label>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button type="submit" class="btn btn-lg btn-primary btn-block" name="login_user">Login</button>
     <p><a class="p-2 text-dark" href="#">Forgot password</a> ?</p>
-    <p>Pas encore de compte ?<a class="p-2 text-dark" href="signup.php">Inscrivez-vous</a> !</p>
+    <p>Pas encore de compte ?<a class="p-2 text-dark" href="register.php">Inscrivez-vous</a> !</p>
     <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
 </form>
 

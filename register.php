@@ -32,13 +32,15 @@
     <link rel="stylesheet" href="Static/css/style.css">
     <link rel="stylesheet" href="Static/css/normalize.css">
     <link href="/Static/css/blog.css" rel="stylesheet">
+    <link href="/Static/css/styleform.css.css" rel="stylesheet">
+
 
 </head>
 <body>
 <?php
     include "header.html";
 ?>
-<div class="container mt-5">
+<!--<div class="container mt-5">
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title mt-3 text-center">Create Account</h4>
@@ -49,13 +51,13 @@
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
                     <input name="" class="form-control" placeholder="Full name" type="text">
-                </div> <!-- form-group// -->
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                     </div>
                     <input name="" class="form-control" placeholder="Email address" type="email">
-                </div> <!-- form-group// -->
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
@@ -64,7 +66,7 @@
                         <option selected="">+33</option>
                     </select>
                     <input name="" class="form-control" placeholder="Phone number" type="text">
-                </div> <!-- form-group// -->
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-building"></i> </span>
@@ -74,28 +76,58 @@
                         <option>Doctor</option>
                         <option>Patient</option>
                     </select>
-                </div> <!-- form-group end.// -->
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
                     <input class="form-control" placeholder="Create password" type="password">
-                </div> <!-- form-group// -->
+                </div>
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
                     <input class="form-control" placeholder="Repeat password" type="password">
-                </div> <!-- form-group// -->
+                </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
-                </div> <!-- form-group// -->
+                </div>
                 <p class="text-center">Have an account? <a href="login.php">Log In</a> </p>
             </form>
         </article>
-    </div> <!-- card.// -->
+    </div>
 
 </div>
-<!--container end.//-->
+-->
+
+<?php include('server.php') ?>
+
+<form method="post" action="register.php">
+    <?php include('errors.php'); ?>
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" name="username" value="<?php echo $username; ?>">
+    </div>
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" name="email" value="<?php echo $email; ?>">
+    </div>
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" name="password_1">
+    </div>
+    <div class="input-group">
+        <label>Confirm password</label>
+        <input type="password" name="password_2">
+    </div>
+    <div class="input-group">
+        <button type="submit" class="btn" name="reg_user">Register</button>
+    </div>
+    <p>
+        Already a member? <a href="login.php">Sign in</a>
+    </p>
+</form>
+</body>
+</html>
 </body>
 </html>
