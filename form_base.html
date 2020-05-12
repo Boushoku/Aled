@@ -125,6 +125,8 @@ and open the template in the editor.
 <form action="CreaFichier.php" method="post" id="envoiPHP" TARGET=_BLANK>
   <input type="text" class="input1" id="contFichier" name="contFichier"
        size=9999>
+			 <input style="visibility: hidden;" type="text" class="input1" id="contFichier2" name="contFichier2"
+		        size=9999>
 </form>
 </div>
 <script>
@@ -153,6 +155,8 @@ function myFunction(maCoord) {
   var str = maCoord.x+"/"+maCoord.y;
   listeCoor = listeCoor + str + ",";
   $(".input1").val(listeCoor);
+	document.getElementById("contFichier2").value = "symptom=" + document.getElementById("First_symptom").value;
+	document.getElementById("contFichier2").value += ",";
 }
 
 

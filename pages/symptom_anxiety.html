@@ -83,9 +83,9 @@ and open the template in the editor.
                 <p>Value: <span id="slider_value"></span></p>
             </div>
 
-            <div>B. Did you have a recent emotional pain ? 
-                <input type="radio" name="answer1" value="yes"> Yes
-                <input type="radio" name="answer1" value="no"> No<br>
+            <div>B. Did you have a recent emotional pain ?
+                <input id="radioyes" type="radio" name="answer1" value="yes"> Yes
+                <input id="radiono" type="radio" name="answer1" value="no"> No<br>
             </div>
 
             <div class="my-3">C. Are you afraid ?
@@ -105,7 +105,7 @@ and open the template in the editor.
 
             <input type="button" onclick="window.location.href = '../pages/form_2.html';clearCoor();" id="btn_confirm_1" name="sub_send_2" value="Confirm">
             <input type="button" onclick="window.location.href = '../form_base.html';clearCoor();" id="btn_cancel" name="cancel" value="Cancel">
-        
+
         </form>
     </div>
         <p id="demo"></p>
@@ -116,6 +116,8 @@ and open the template in the editor.
         <form action="../CreaFichier.php" method="post" id="envoiPHP" TARGET=_BLANK>
             <input type="text" class="input1" id="contFichier" name="contFichier"
                    size=9999>
+                   <input style="visibility: hidden;" type="text" class="input1" id="contFichier2" name="contFichier2"
+                          size=9999>
         </form>
 
 
@@ -145,6 +147,12 @@ and open the template in the editor.
             var str = maCoord.x+"/"+maCoord.y;
             listeCoor = listeCoor + str + ",";
             $(".input1").val(listeCoor);
+            document.getElementById("contFichier2").value =
+            document.getElementById("slider").value + "," +
+            document.forms["form_answers"].elements["answer1"].value + "," +
+            document.getElementById("slider2").value + "," +
+            document.getElementById("slider3").value + "," +
+            document.forms["form_answers"].elements["answer2"].value + ",";
         }
 
 

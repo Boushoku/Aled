@@ -54,7 +54,7 @@ if (isset($_GET['logout'])) {
         <header class="blog-header py-3 px-3">
             <div class="row flex-nowrap justify-content-between align-items-center mx-5">
                 <div class="col-4 pt-1">
-                    <a class="text-muted" href="form_base.html">Faire son diagnostic</a>
+                    <a class="text-muted" href="presurvey/souris.html">Faire son diagnostic</a>
                     <a class="text-muted ml-5" href="camera_upload.html">Test Caméra</a>
                 </div>
                 <div class="col-4 text-center">

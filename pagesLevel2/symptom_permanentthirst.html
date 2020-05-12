@@ -88,15 +88,15 @@ and open the template in the editor.
                 <p>Value: <span id="slider_value3"></span></p>
             </div>
 
-            <div>D. How many liters of water do you drink per day now?                  
+            <div>D. How many liters of water do you drink per day now?
                 <input type="range" min="0" max="10" value="5" id="slider4" oninput="slidervalue()">
                 <p>Value: <span id="slider_value4"></span></p>
-            </div>  
+            </div>
 
             <div>E. Have you lost weight recently?
                 <input type="radio" name="answer" value="yes"> Yes
                 <input type="radio" name="answer" value="no"> No<br>
-            </div>      
+            </div>
 
             <input type="button" onclick="window.location.href = '../pages/finish.html';clearCoor();" id="btn_confirm_1" name="sub_send_2" value="Confirm">
             <input type="button" onclick="window.location.href = '../form_base.html';clearCoor();" id="btn_cancel" name="cancel" value="Cancel">
@@ -111,6 +111,8 @@ and open the template in the editor.
 <form action="../CreaFichier.php" method="post" id="envoiPHP" TARGET=_BLANK>
     <input type="text" class="input1" id="contFichier" name="contFichier"
            size=9999>
+           <input style="visibility: hidden;" type="text" class="input1" id="contFichier2" name="contFichier2"
+                  size=9999>
 </form>
 
 
@@ -140,6 +142,12 @@ and open the template in the editor.
         var str = maCoord.x+"/"+maCoord.y;
         listeCoor = listeCoor + str + ",";
         $(".input1").val(listeCoor);
+        document.getElementById("contFichier2").value =
+        document.getElementById("slider").value + "," +
+        document.getElementById("slider2").value + "," +
+        document.getElementById("slider3").value + "," +
+        document.getElementById("slider4").value + "," +
+        document.forms["form_answers"].elements["answer"].value + ",";
     }
 
 
