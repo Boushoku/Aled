@@ -45,7 +45,7 @@
 <?php
     include "header.html";
     include('server.php');
-
+    include('errors.php');
 ?>
 
 <form class="form-signin text-center mt-5" method="post" action="login.php">
