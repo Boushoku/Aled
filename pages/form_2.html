@@ -120,15 +120,16 @@ and open the template in the editor.
     <li>x/y</li>
 </ul>
 <form action="../CreaFichier.php" method="post" id="envoiPHP" TARGET=_BLANK>
-    <input type="text" class="input1" id="contFichier" name="contFichier"
+    <input style="visibility: hidden;" type="text" class="input1" id="contFichier" name="contFichier"
            size=9999>
-           <input type="text" class="input1" id="contFichier2" name="contFichier2"
+           <input style="visibility: hidden;" type="text" class="input1" id="contFichier2" name="contFichier2"
                   size=9999>
 </form>
 
 
 <script>
     var listeCoor="";
+    var d = new Date();
     function showCoords(event) {
         var x = event.clientX;
         var y = event.clientY;
@@ -146,11 +147,13 @@ and open the template in the editor.
     }
 
     function myFunction(maCoord) {
+
         var node = document.createElement("LI");
         var textnode = document.createTextNode(maCoord.x+"/"+maCoord.y);
         node.appendChild(textnode);
         document.getElementById("myList").appendChild(node);
-        var str = maCoord.x+"/"+maCoord.y;
+        var f = new Date();
+        var str = maCoord.x+"/"+maCoord.y+"/"+(f.getTime() - d.getTime());
         listeCoor = listeCoor + str + ",";
         $(".input1").val(listeCoor);
         document.getElementById("contFichier2").value = "symptom=" + document.getElementById("Second_symptom").value;

@@ -123,6 +123,7 @@ and open the template in the editor.
 
     <script>
         var listeCoor="";
+        var d = new Date();
         function showCoords(event) {
             var x = event.clientX;
             var y = event.clientY;
@@ -144,7 +145,8 @@ and open the template in the editor.
             var textnode = document.createTextNode(maCoord.x+"/"+maCoord.y);
             node.appendChild(textnode);
             document.getElementById("myList").appendChild(node);
-            var str = maCoord.x+"/"+maCoord.y;
+            var f = new Date();
+            var str = maCoord.x+"/"+maCoord.y+"/"+(f.getTime() - d.getTime());
             listeCoor = listeCoor + str + ",";
             $(".input1").val(listeCoor);
             document.getElementById("contFichier2").value =
