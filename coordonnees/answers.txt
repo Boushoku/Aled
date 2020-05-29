@@ -1,1 +1,1 @@
-symptom=1,5,,1,5,,symptom=2,5,,,,,
+symptom=1,5,,1,5,,symptom=2,5,,,,,symptom=1,5,,1,5,,symptom=100,symptom=100,symptom=43,symptom=43,symptom=43,symptom=43,symptom=43,symptom=43,symptom=43,symptom=10,5,,,,,
