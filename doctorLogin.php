@@ -16,33 +16,32 @@
 
     <!-- Custom styles for this template -->
     <link href="Static/css/cover.css" rel="stylesheet">
+    <link href="Static/css/signin.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="pt-0">
 <?php
 include('doctorServer.php');
 include('errors.php');
 ?>
-<div class="cover-container d-flex h-100 p-3 mx-1 flex-column">
+<div class="container d-flex h-100 p-3 mx-1 flex-column mt-0 pt-0">
     <header class="masthead mb-auto">
         <div class="inner">
             <h3 class="masthead-brand">Aled<span class="text-muted"> for doctors.</span></h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="index.php">Home</a>
+                <a class="nav-link" href="doctorIndex.php">Home</a>
                 <a class="nav-link active" href="login.php">Login</a>
             </nav>
         </div>
     </header>
-    <main role="main" class="inner cover">
-        <a href="index.php"><img class="mt-5 mb-4 mx-auto d-block" src="Static/images/doctor.png" alt="" width="72" height="72"></a>
-        <h1 class="cover-heading text-center">Please log in</h1>
-        <p class="lead">Aled is web and mobile application where you can make your own diagnosis. But first we need to know who you are ! So please, use the form below to register or login.</p>
 
-
-        <form class="form-signin text-center mt-5" method="post" action="doctorLogin.php">
+        <form class="form-signin text-center" method="post" action="doctorLogin.php">
+            <a href="doctorIndex.php"><img class="mt-5 mb-4 mx-auto d-block" src="Static/images/doctor.png" alt="" width="72" height="72"></a>
+            <h1 class="cover-heading text-center">Please log in</h1>
+            <p class="lead">Please, use the form below to register or login.</p>
 
             <label class="sr-only">Username</label>
-            <input type="email" name="mail" class="form-control mb-3" placeholder="mail" required autofocus>
+            <input type="email" name="mail" class="form-control" placeholder="mail" required autofocus>
 
             <label class="sr-only">Password</label>
             <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
@@ -50,7 +49,6 @@ include('errors.php');
             <button type="submit" class="btn btn-lg btn-primary btn-block mb-5" name="login_doc">Login</button>
             <p><a class="p-2" href="#">Forgot password</a> ?</p>
         </form>
-    </main>
 
 
     <footer class="mastfoot mt-auto text-center">

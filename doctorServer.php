@@ -15,8 +15,8 @@ $db = mysqli_connect('mysql-boushoku.alwaysdata.net', 'boushoku', 'loloes15', 'b
 if (isset($_POST['reg_doctor'])) {
     // receive all input values from the form
     $mail = mysqli_real_escape_string($db, $_POST['mail']);
-    $nom = mysqli_real_escape_string($db, $_POST['prenom']);
-    $prenom = mysqli_real_escape_string($db, $_POST['nom']);
+    $nom = mysqli_real_escape_string($db, $_POST['nom']);
+    $prenom = mysqli_real_escape_string($db, $_POST['prenom']);
     $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
@@ -24,7 +24,7 @@ if (isset($_POST['reg_doctor'])) {
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($mail)) { array_push($errors, "mail is required"); }
     if (empty($prenom)) { array_push($errors, "prenom is required"); }
-    if (empty($nom)) { array_push($errors, "prenom is required"); }
+    if (empty($nom)) { array_push($errors, "nom is required"); }
     if (empty($password_1)) { array_push($errors, "Password is required"); }
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
@@ -32,7 +32,7 @@ if (isset($_POST['reg_doctor'])) {
 
     // first check the database to make sure
     // a user does not already exist with the same mail and/or email
-    $user_check_query = "SELECT * FROM Doctors WHERE mail='$mail' LIMIT 1";
+    $user_check_query = "SELECT * FROM doctors WHERE mail='$mail' LIMIT 1";
     $result = mysqli_query($db, $user_check_query);
     $user = mysqli_fetch_assoc($result);
 
@@ -46,7 +46,7 @@ if (isset($_POST['reg_doctor'])) {
     if (count($errors) == 0) {
         $password = md5($password_1);//encrypt the password before saving in the database
 
-        $query = "INSERT INTO Doctors (mail, prenom, nom, password) 
+        $query = "INSERT INTO doctors (mail, prenom, nom, password) 
   			  VALUES('$mail', '$prenom','$nom', '$password')";
         mysqli_query($db, $query);
         header('location: doctorIndex.php');
@@ -68,7 +68,7 @@ if (isset($_POST['login_doc'])) {
 
     if (count($errors) == 0) {
         $password = md5($password);
-        $query = "SELECT * FROM Doctors WHERE mail='$mail' AND password='$password'";
+        $query = "SELECT * FROM doctors WHERE mail='$mail' AND password='$password'";
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
             $_SESSION['mail'] = $mail;
@@ -79,3 +79,5 @@ if (isset($_POST['login_doc'])) {
         }
     }
 }
+
+

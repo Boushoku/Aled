@@ -1,5 +1,23 @@
 <?php
+include('doctorServer.php');
 session_start();
+if(isset($_SESSION['mail'])){
+    $mail = $_SESSION['mail'];
+    $doctor_get_info = "SELECT * FROM doctors WHERE mail='$mail' LIMIT 1";
+    $result = mysqli_query($db, $doctor_get_info);
+    $data = mysqli_fetch_assoc($result);
+    $nomdoctor = $data['nom'];
+    $prenomdoctor = $data['prenom'];
+    $maildoctor = $data['mail'];
+    $iddoctor = $data['IdDoc'];
+
+    //get appointements informations with the current doc id
+    //TODO : faire des jointures avec les autres tables pour avoir nom/prenom/taille/poids/addresse/numsecu
+    $get_appointement = "SELECT * FROM appointement WHERE id_doc='$iddoctor'";
+    $result_ap = mysqli_query($db, $get_appointement);
+
+}
+
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['mail']);
@@ -29,7 +47,7 @@ if (isset($_GET['logout'])) {
 
 <body class="text-center">
 
-<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+<div class="container d-flex h-100 p-3 flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
             <h3 class="masthead-brand">Aled<span class="text-muted"> for doctors.</span></h3>
@@ -44,17 +62,43 @@ if (isset($_GET['logout'])) {
         </div>
     </header>
 
-    <main role="main" class="inner cover">
         <?php  if (isset($_SESSION['mail'])) : ?>
-            <h1 class="cover-heading">My appointements</h1>
-        <?php else :?>
+            <p class="text-muted">Welcome Dr <?php echo $prenomdoctor;?> <?php echo $nomdoctor;?></p>
+            <h1 class="cover-heading mb-5">My appointements</h1>
+        <div class="container">
+            <div class="card-deck mb-3 text-center">
+                <?php
+                //parse the result of query to get every pre-info
+                while ($row = mysqli_fetch_assoc($result_ap)) {
+                   echo '
+                    <div class="card mb-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal" style="color: black; text-shadow: none">Nom Prenom</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title" style="color: black; text-shadow: none">Info <small class="text-muted">/ info</small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li style="color: black; text-shadow: none">Date : '.$row["date_appoi"].'
+                            <li style="color: black; text-shadow: none">Hour : '.$row["hour_appoi"].'                         
+                            <li style="color: black; text-shadow: none">information</li>
+                            <li style="color: black; text-shadow: none">information</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">View profile</button>
+                    </div>
+                </div>';
+
+                }
+                ?>
+            </div>
+        </div>
+
+            <?php else :?>
             <h1 class="cover-heading">You need to register first !</h1>
             <p class="lead">Aled is web and mobile application where you can make your own diagnosis. But first we need to know who you are ! So please, use the button below to register or login.</p>
             <p class="lead">
                 <a href="doctorLogin.php" class="btn btn-lg btn-secondary">Login now</a>
             </p>
         <?php endif ?>
-    </main>
 
     <footer class="mastfoot mt-auto text-center">
         <div class="inner">
