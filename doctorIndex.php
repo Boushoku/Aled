@@ -2,8 +2,8 @@
 session_start();
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['username']);
-    header("location: index.php");
+    unset($_SESSION['mail']);
+    header("location: doctorIndex.php");
 }
 ?>
 <!doctype html>
@@ -32,31 +32,26 @@ if (isset($_GET['logout'])) {
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
-            <h3 class="masthead-brand">Aled</h3>
+            <h3 class="masthead-brand">Aled<span class="text-muted"> for doctors.</span></h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link active" href="index.php">Home</a>
-                <?php  if (isset($_SESSION['username'])) : ?>
-                    <a class="nav-link" href="#"><?php echo $_SESSION['username']; ?></a>
-                    <a class="nav-link" href="index.php?logout='1'">logout</a>
+                <a class="nav-link active" href="doctorIndex.php">Home</a>
+                <?php  if (isset($_SESSION['mail'])) : ?>
+                    <a class="nav-link" href="doctorIndex.php?logout='1'">logout</a>
                 <?php else :?>
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="nav-link" href="doctorLogin.php">Login</a>
                 <?php endif ?>
             </nav>
         </div>
     </header>
 
     <main role="main" class="inner cover">
-        <?php  if (isset($_SESSION['username'])) : ?>
-            <h1 class="cover-heading">Make Your Diagnosis</h1>
-            <p class="lead">Aled is web and mobile application where you can make your own diagnosis. You can now make your own diagnosis using the button below</p>
-            <p class="lead">
-                <a href="presurvey/souris.html" class="btn btn-lg btn-secondary">Make diagnosis</a>
-            </p>
+        <?php  if (isset($_SESSION['mail'])) : ?>
+            <h1 class="cover-heading">My appointements</h1>
         <?php else :?>
             <h1 class="cover-heading">You need to register first !</h1>
             <p class="lead">Aled is web and mobile application where you can make your own diagnosis. But first we need to know who you are ! So please, use the button below to register or login.</p>
             <p class="lead">
-                <a href="login.php" class="btn btn-lg btn-secondary">Login now</a>
+                <a href="doctorLogin.php" class="btn btn-lg btn-secondary">Login now</a>
             </p>
         <?php endif ?>
     </main>

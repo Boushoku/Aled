@@ -20,13 +20,13 @@
 </head>
 <body>
 <?php
-include('server.php');
+include('doctorServer.php');
 include('errors.php');
 ?>
 <div class="cover-container d-flex h-100 p-3 mx-1 flex-column">
     <header class="masthead mb-auto">
         <div class="inner">
-            <h3 class="masthead-brand">Aled</h3>
+            <h3 class="masthead-brand">Aled<span class="text-muted"> for doctors.</span></h3>
             <nav class="nav nav-masthead justify-content-center">
                 <a class="nav-link" href="index.php">Home</a>
                 <a class="nav-link active" href="login.php">Login</a>
@@ -39,25 +39,23 @@ include('errors.php');
         <p class="lead">Aled is web and mobile application where you can make your own diagnosis. But first we need to know who you are ! So please, use the form below to register or login.</p>
 
 
-        <form class="form-signin text-center mt-5" method="post" action="login.php">
+        <form class="form-signin text-center mt-5" method="post" action="doctorLogin.php">
 
             <label class="sr-only">Username</label>
-            <input type="text" name="username" class="form-control mb-3" placeholder="username" required autofocus>
+            <input type="email" name="mail" class="form-control mb-3" placeholder="mail" required autofocus>
 
             <label class="sr-only">Password</label>
             <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
 
-            <button type="submit" class="btn btn-lg btn-primary btn-block mb-5" name="login_user">Login</button>
+            <button type="submit" class="btn btn-lg btn-primary btn-block mb-5" name="login_doc">Login</button>
             <p><a class="p-2" href="#">Forgot password</a> ?</p>
-            <p>Not registered yet ?<a class="p-2" href="register.php">Create an account now</a> !</p>
-            <p>You are a doctor ?<a class="p-2" href="doctorIndex.php">Access to your account</a> !</p>
         </form>
     </main>
 
 
     <footer class="mastfoot mt-auto text-center">
         <div class="inner">
-            <p>&copy; 2020 <a href="index.php">Aled</a>.  All rights reserved.</p>
+            <p>&copy; 2020 <a href="doctorIndex.php">Aled</a>.  All rights reserved.</p>
         </div>
     </footer>
 </div>
