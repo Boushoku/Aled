@@ -244,7 +244,6 @@ textarea {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -253,6 +252,7 @@ textarea {
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
@@ -263,7 +263,6 @@ textarea {
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
@@ -285,14 +284,10 @@ textarea {
         page-break-after: avoid;
     }
 }
-
-#id_div{
-	display:block;
-	float:left;
-	border-style: solid;
-	border-color: grey;
-	width:49%;
-	height:49%;
-	background:url(/static/img/bg.jpg);
-	background-size:100% auto; /* ADAPTATION de l'image au conteneur */
+.cover {
+    padding: 0 1.5rem;
+}
+.cover .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
 }
