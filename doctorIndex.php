@@ -11,9 +11,10 @@ if(isset($_SESSION['mail'])){
     $maildoctor = $data['mail'];
     $iddoctor = $data['IdDoc'];
 
-    //get appointements informations with the current doc id
-    //TODO : faire des jointures avec les autres tables pour avoir nom/prenom/taille/poids/addresse/numsecu
-    $get_appointement = "SELECT * FROM appointement WHERE id_doc='$iddoctor'";
+    //get appointements and user informations informations with the current doc id
+    $get_appointement = "SELECT * FROM appointement INNER JOIN patient_medical_record ON appointement.id_user=patient_medical_record.id_user
+INNER JOIN social_details ON social_details.id_user=patient_medical_record.id_user
+WHERE appointement.id_doc='$iddoctor'";
     $result_ap = mysqli_query($db, $get_appointement);
 
 }
@@ -73,17 +74,16 @@ if (isset($_GET['logout'])) {
                    echo '
                     <div class="card mb-4">
                     <div class="card-header">
-                        <h4 class="my-0 font-weight-normal" style="color: black; text-shadow: none">Nom Prenom</h4>
+                        <h4 class="my-0 font-weight-normal" style="color: black; text-shadow: none">'.$row["firstname"].' '.$row["lastname"].'</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title pricing-card-title" style="color: black; text-shadow: none">Info <small class="text-muted">/ info</small></h1>
+                        <h1 class="card-title pricing-card-title" style="color: black; text-shadow: none">'.$row["height"].' cm<small class="text-muted">/ '.$row["weight"].' kg</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
                             <li style="color: black; text-shadow: none">Date : '.$row["date_appoi"].'
                             <li style="color: black; text-shadow: none">Hour : '.$row["hour_appoi"].'                         
-                            <li style="color: black; text-shadow: none">information</li>
-                            <li style="color: black; text-shadow: none">information</li>
+                            <li style="color: black; text-shadow: none">Phone : +33'.$row["phonenum"].'</li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">View profile</button>
+                        <a style="text-decoration:none" href="user_profile.php?id='.$row["id_user"].'"><button type="button" class="btn btn-lg btn-block btn-outline-primary">View profile</button></a>
                     </div>
                 </div>';
 
