@@ -33,7 +33,7 @@ function slidervalue() {
     }
 }
 
-// Print the correct form dynamically 
+// Print the correct form dynamically
 // and redirect
 function form() {
 
@@ -41,49 +41,49 @@ function form() {
     var First_symptom = form.options[form.selectedIndex].value;
 
     if (First_symptom === "1") {
-        window.location = "../pages/symptom_anxiety.html";
+        window.location = "../pages/symptom_anxiety.php";
     } else if (First_symptom === "2") {
-        window.location = "../pages/symptom_armpain.html";
+        window.location = "../pages/symptom_armpain.php";
     } else if (First_symptom === "3") {
-        window.location = "../pages/symptom_backpain.html";
+        window.location = "../pages/symptom_backpain.php";
     } else if (First_symptom === "4") {
-        window.location = "../pages/symptom_breathingdifficulty.html";
+        window.location = "../pages/symptom_breathingdifficulty.php";
     } else if (First_symptom === "5") {
-        window.location = "../pages/symptom_chills.html";
+        window.location = "../pages/symptom_chills.php";
     } else if (First_symptom === "6") {
-        window.location = "../pages/symptom_cough.html";
+        window.location = "../pages/symptom_cough.php";
     } else if (First_symptom === "7") {
-        window.location = "../pages/symptom_delusions.html";
+        window.location = "../pages/symptom_delusions.php";
     } else if (First_symptom === "8") {
-        window.location = "../pages/symptom_diarrhea.html";
+        window.location = "../pages/symptom_diarrhea.php";
     } else if (First_symptom === "9") {
-        window.location = "../pages/symptom_distendedbelly.html";
+        window.location = "../pages/symptom_distendedbelly.php";
     } else if (First_symptom === "10") {
-        window.location = "../pages/symptom_earpain.html";
+        window.location = "../pages/symptom_earpain.php";
     } else if (First_symptom === "11") {
-        window.location = "../pages/symptom_fatigue.html";
+        window.location = "../pages/symptom_fatigue.php";
     } else if (First_symptom === "12") {
-        window.location = "../pages/symptom_fever.html";
+        window.location = "../pages/symptom_fever.php";
     } else if (First_symptom === "13") {
-        window.location = "../pages/symptom_flatulence.html";
+        window.location = "../pages/symptom_flatulence.php";
     } else if (First_symptom === "14") {
-        window.location = "../pages/symptom_headache.html";
+        window.location = "../pages/symptom_headache.php";
     } else if (First_symptom === "15") {
-        window.location = "../pages/symptom_nausea.html";
+        window.location = "../pages/symptom_nausea.php";
     } else if (First_symptom === "16") {
-        window.location = "../pages/symptom_neckpain.html";
+        window.location = "../pages/symptom_neckpain.php";
     } else if (First_symptom === "17") {
-        window.location = "../pages/symptom_nosebleed.html";
+        window.location = "../pages/symptom_nosebleed.php";
     } else if (First_symptom === "18") {
-        window.location = "../pages/symptom_permanentthirst.html";
+        window.location = "../pages/symptom_permanentthirst.php";
     } else if (First_symptom === "19") {
-        window.location = "../pages/symptom_stomachache.html";
+        window.location = "../pages/symptom_stomachache.php";
     } else if (First_symptom === "20") {
-        window.location = "../pages/symptom_sweat.html";
+        window.location = "../pages/symptom_sweat.php";
     } else if (First_symptom === "21") {
-        window.location = "../pages/symptom_tremor.html";
+        window.location = "../pages/symptom_tremor.php";
     } else if (First_symptom === "22") {
-        window.location = "../pages/symptom_tremor.html";
+        window.location = "../pages/symptom_tremor.php";
     }
 }
 function form2() {
@@ -92,49 +92,49 @@ function form2() {
     var Second_symptom = form.options[form.selectedIndex].value;
 
     if (Second_symptom === "1") {
-        window.location = "../pagesLevel2/symptom_anxiety.html";
+        window.location = "../pagesLevel2/symptom_anxiety.php";
     } else if (Second_symptom === "2") {
-        window.location = "../pagesLevel2/symptom_armpain.html";
+        window.location = "../pagesLevel2/symptom_armpain.php";
     } else if (Second_symptom === "3") {
-        window.location = "../pagesLevel2/symptom_backpain.html";
+        window.location = "../pagesLevel2/symptom_backpain.php";
     } else if (Second_symptom === "4") {
-        window.location = "../pagesLevel2/symptom_breathingdifficulty.html";
+        window.location = "../pagesLevel2/symptom_breathingdifficulty.php";
     } else if (Second_symptom === "5") {
-        window.location = "../pagesLevel2/symptom_chills.html";
+        window.location = "../pagesLevel2/symptom_chills.php";
     } else if (Second_symptom === "6") {
-        window.location = "../pagesLevel2/symptom_cough.html";
+        window.location = "../pagesLevel2/symptom_cough.php";
     } else if (Second_symptom === "7") {
-        window.location = "../pagesLevel2/symptom_delusions.html";
+        window.location = "../pagesLevel2/symptom_delusions.php";
     } else if (Second_symptom === "8") {
-        window.location = "../pagesLevel2/symptom_diarrhea.html";
+        window.location = "../pagesLevel2/symptom_diarrhea.php";
     } else if (Second_symptom === "9") {
-        window.location = "../pagesLevel2/symptom_distendedbelly.html";
+        window.location = "../pagesLevel2/symptom_distendedbelly.php";
     } else if (Second_symptom === "10") {
-        window.location = "../pagesLevel2/symptom_earpain.html";
+        window.location = "../pagesLevel2/symptom_earpain.php";
     } else if (Second_symptom === "11") {
-        window.location = "../pagesLevel2/symptom_fatigue.html";
+        window.location = "../pagesLevel2/symptom_fatigue.php";
     } else if (Second_symptom === "12") {
-        window.location = "../pagesLevel2/symptom_fever.html";
+        window.location = "../pagesLevel2/symptom_fever.php";
     } else if (Second_symptom === "13") {
-        window.location = "../pagesLevel2/symptom_flatulence.html";
+        window.location = "../pagesLevel2/symptom_flatulence.php";
     } else if (Second_symptom === "14") {
-        window.location = "../pagesLevel2/symptom_headache.html";
+        window.location = "../pagesLevel2/symptom_headache.php";
     } else if (Second_symptom === "15") {
-        window.location = "../pagesLevel2/symptom_nausea.html";
+        window.location = "../pagesLevel2/symptom_nausea.php";
     } else if (Second_symptom === "16") {
-        window.location = "../pagesLevel2/symptom_neckpain.html";
+        window.location = "../pagesLevel2/symptom_neckpain.php";
     } else if (Second_symptom === "17") {
-        window.location = "../pagesLevel2/symptom_nosebleed.html";
+        window.location = "../pagesLevel2/symptom_nosebleed.php";
     } else if (Second_symptom === "18") {
-        window.location = "../pagesLevel2/symptom_permanentthirst.html";
+        window.location = "../pagesLevel2/symptom_permanentthirst.php";
     } else if (Second_symptom === "19") {
-        window.location = "../pagesLevel2/symptom_stomachache.html";
+        window.location = "../pagesLevel2/symptom_stomachache.php";
     } else if (Second_symptom === "20") {
-        window.location = "../pagesLevel2/symptom_sweat.html";
+        window.location = "../pagesLevel2/symptom_sweat.php";
     } else if (Second_symptom === "21") {
-        window.location = "../pagesLevel2/symptom_tremor.html";
+        window.location = "../pagesLevel2/symptom_tremor.php";
     } else if (Second_symptom === "22") {
-        window.location = "../pagesLevel2/symptom_tremor.html";
+        window.location = "../pagesLevel2/symptom_tremor.php";
     }
 }
 
@@ -146,5 +146,3 @@ window.addEventListener("load", function () {
     window.document.querySelector("#btn_symptom_2").addEventListener("click", form2);
 
 });
-
-

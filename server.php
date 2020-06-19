@@ -7,7 +7,8 @@ $email    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('mysql-boushoku.alwaysdata.net', 'boushoku', 'loloes15', 'boushoku_test');
+//$db = mysqli_connect('mysql-boushoku.alwaysdata.net', 'boushoku', 'loloes15', 'boushoku_test');
+$db = mysqli_connect('localhost', 'root', '', 'boushoku_test');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {

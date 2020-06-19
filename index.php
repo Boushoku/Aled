@@ -50,7 +50,7 @@ if (isset($_GET['logout'])) {
             <h1 class="cover-heading">Make Your Diagnosis</h1>
             <p class="lead">Aled is web and mobile application where you can make your own diagnosis. You can now make your own diagnosis using the button below</p>
             <p class="lead">
-                <a href="presurvey/souris.html" class="btn btn-lg btn-secondary">Make diagnosis</a>
+                <a href="presurvey/NewTest.php?username=<?php echo $_SESSION['username']; ?>" class="btn btn-lg btn-secondary">Make diagnosis</a>
             </p>
         <?php else :?>
             <h1 class="cover-heading">You need to register first !</h1>

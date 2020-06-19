@@ -18,7 +18,11 @@ WHERE users.id='$userid'";
     }
 
 }
-
+$_SESSION['adresse'] = $row["number"];
+$_SESSION['adresse'] .= '&nbsp;';
+$_SESSION['adresse'] .= $row["street"];
+$_SESSION['adresse'] .= '&nbsp;';
+$_SESSION['adresse'] .= $row["zipcode"];
 ?>
 <!doctype html>
 <html lang="en">
@@ -28,7 +32,6 @@ WHERE users.id='$userid'";
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/png" href="Static/images/doctor.png"/>
-
     <title>User Profile</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
@@ -41,16 +44,33 @@ WHERE users.id='$userid'";
 </head>
 
 <body class="text-center">
+<div href="#_" class="lightbox" id="map-container"><?php
+include 'map.php';
+?>
+</br>
+</br>
+</br>
+<a href="#_">Fermer</a>
+</div>
 <?php echo '
+
 <div class="container emp-profile">
     <form method="post">
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
-                </div>
+                
+
+
+				</div>
+				
+                
+                
             </div>
+			
             <div class="col-md-6">
+	
                 <div class="profile-head">
                     <h5>
                         '.$row["firstname"].' '.$row["lastname"].'
@@ -71,6 +91,10 @@ WHERE users.id='$userid'";
         </div>
         <div class="row">
             <div class="col-md-4">
+			</br>
+				<a href="#map-container">
+					<img class="geo-button" src="Static/images/placeholder.png" class="thumbnail">
+				</a>
                 <div class="profile-work">
                 </div>
             </div>
@@ -180,7 +204,10 @@ WHERE users.id='$userid'";
 </footer>
 <style>body{
         background: -webkit-linear-gradient(left, #333333, #333333);
+		margin: 0; 
+		padding: 0;
     }
+	#mapcontainer { margin: auto; width: 100px; }
     .emp-profile{
         padding: 3%;
         margin-top: 3%;
@@ -188,6 +215,10 @@ WHERE users.id='$userid'";
         border-radius: 0.5rem;
         background: #fff;
     }
+	.geo-button{
+		width:70%;
+		height:80%;
+	}
     .profile-img{
         text-align: center;
     }
@@ -272,7 +303,36 @@ WHERE users.id='$userid'";
     .profile-tab p{
         font-weight: 600;
         color: #0062cc;
-    }</style>
+    }
+	.lightbox {
+	/** Default lightbox to hidden */
+	display: none;
+
+	/** Position and style */
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+	/** Pad the lightbox image */
+	max-width: 90%;
+	max-height: 80%;
+	margin-top: 2%;
+}
+
+.lightbox:target {
+	/** Remove default browser outline */
+	outline: none;
+
+	/** Unhide lightbox **/
+	display: block;
+}</style>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -280,5 +340,6 @@ WHERE users.id='$userid'";
 <script>window.jQuery || document.write('<script src="Static/js/jquery.min.js"><\/script>')</script>
 <script src="Static/js/popper.min.js"></script>
 <script src="Static/js/bootstrap.min.js"></script>
+
 </body>
 </html>
