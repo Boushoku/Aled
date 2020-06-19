@@ -2,83 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07298751-0359-428f-9370-95f506426bc5" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/CreaFichier.php" beforeDir="false" afterPath="$PROJECT_DIR$/CreaFichier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreaFichierClavier.php" beforeDir="false" afterPath="$PROJECT_DIR$/CreaFichierClavier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreaFichierSouris.php" beforeDir="false" afterPath="$PROJECT_DIR$/CreaFichierSouris.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/css/cover.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static/css/cover.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/css/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static/css/signin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/css/styleform.css" beforeDir="false" afterPath="$PROJECT_DIR$/Static/css/styleform.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/images/background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Static/images/background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Static/js/form_base.js" beforeDir="false" afterPath="$PROJECT_DIR$/Static/js/form_base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/camera_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/camera_upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/answers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/coor.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/test_clavier_coor.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/test_clavier_entry.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/test_clavier_input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coordonnees/test_souris.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/doctorIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/doctorLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctorServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/doctorServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/errors.php" beforeDir="false" afterPath="$PROJECT_DIR$/errors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.ol.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.ol.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/finish.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/form_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_anxiety.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_armpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_backpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_breathingdifficulty.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_chills.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_cough.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_delusions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_diarrhea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_distendedbelly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_earpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_fatigue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_fever.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_flatulence.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_headache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_nausea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_neckpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_nosebleed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_nothing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_permanentthirst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_stomachache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_sweat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_tremor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/symptom_vertigo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_anxiety.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_armpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_backpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_breathingdifficulty.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_chills.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_cough.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_delusions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_diarrhea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_distendedbelly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_earpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_fatigue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_fever.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_flatulence.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_headache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_nausea.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_neckpain.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_nosebleed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_nothing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_permanentthirst.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_stomachache.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_sweat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_tremor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagesLevel2/symptom_vertigo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presurvey/README_CLAVIER.txt" beforeDir="false" afterPath="$PROJECT_DIR$/presurvey/README_CLAVIER.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presurvey/README_SOURIS.txt" beforeDir="false" afterPath="$PROJECT_DIR$/presurvey/README_SOURIS.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presurvey/clavier.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/presurvey/img.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/presurvey/img.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presurvey/souris.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/user_profile.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -123,19 +47,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4275">
-              <caret line="285" column="1" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Static/css/cover.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="975">
               <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -238,7 +162,6 @@
         <option value="$PROJECT_DIR$/footer.html" />
         <option value="$PROJECT_DIR$/base.html" />
         <option value="$PROJECT_DIR$/Static/css/style.css" />
-        <option value="$PROJECT_DIR$/server.php" />
         <option value="$PROJECT_DIR$/newIndex.php" />
         <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -254,6 +177,7 @@
         <option value="$PROJECT_DIR$/doctorServer.php" />
         <option value="$PROJECT_DIR$/doctorIndex.php" />
         <option value="$PROJECT_DIR$/user_profile.php" />
+        <option value="$PROJECT_DIR$/server.php" />
       </list>
     </option>
   </component>
@@ -336,7 +260,7 @@
       <workItem from="1589794852732" duration="567000" />
       <workItem from="1590587497636" duration="6000" />
       <workItem from="1591176330229" duration="30878000" />
-      <workItem from="1592294489799" duration="9045000" />
+      <workItem from="1592294489799" duration="9256000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1571382983445</created>
@@ -356,10 +280,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50047000" />
+    <option name="totallyTimeSpent" value="50258000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26752505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -594,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-318">
@@ -685,6 +603,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
