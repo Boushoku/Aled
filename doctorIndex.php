@@ -13,7 +13,7 @@ if(isset($_SESSION['mail'])){
 
     //get appointements and user informations informations with the current doc id
     $get_appointement = "SELECT * FROM appointement INNER JOIN patient_medical_record ON appointement.id_user=patient_medical_record.id_user
-INNER JOIN social_details ON social_details.id_user=patient_medical_record.id_user
+INNER JOIN social_details ON social_details.id_user=patient_medical_record.id_user INNER JOIN adress ON adress.id_addr=patient_medical_record.id_addr
 WHERE appointement.id_doc='$iddoctor'";
     $result_ap = mysqli_query($db, $get_appointement);
 
@@ -82,6 +82,7 @@ if (isset($_GET['logout'])) {
                             <li style="color: black; text-shadow: none">Date : '.$row["date_appoi"].'
                             <li style="color: black; text-shadow: none">Hour : '.$row["hour_appoi"].'                         
                             <li style="color: black; text-shadow: none">Phone : +33'.$row["phonenum"].'</li>
+                            <li style="color: black; text-shadow: none">Address : '.$row["number"].' '.$row["street"].' '.$row["zipcode"].'</li>
                         </ul>
                         <a style="text-decoration:none" href="user_profile.php?id='.$row["id_user"].'"><button type="button" class="btn btn-lg btn-block btn-outline-primary">View profile</button></a>
                     </div>

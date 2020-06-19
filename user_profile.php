@@ -7,7 +7,7 @@ if(isset($_SESSION['mail'])){
 
     //get appointements and user informations informations with the current doc id
     $get_user_info = "SELECT * FROM users INNER JOIN patient_medical_record ON users.id=patient_medical_record.id_user
-INNER JOIN social_details ON social_details.id_user=patient_medical_record.id_user
+INNER JOIN social_details ON social_details.id_user=patient_medical_record.id_user INNER JOIN adress ON adress.id_addr=patient_medical_record.id_addr
 WHERE users.id='$userid'";
     $result_info = mysqli_query($db, $get_user_info);
     $row = mysqli_fetch_assoc($result_info);
@@ -115,6 +115,14 @@ WHERE users.id='$userid'";
                             </div>
                             <div class="col-md-6">
                                 <p>'.$row["socialsecuritynumber"].'</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Adress</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>'.$row["number"].' '.$row["street"].' '.$row["zipcode"].'</p>
                             </div>
                         </div>
                     </div>
